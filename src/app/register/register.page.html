@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Formulario -->
+  <form (ngSubmit)="register(registerForm)" #registerForm="ngForm">
+    <ion-item>
+  
+      <ion-label position="floating"></ion-label>
+      <ion-input name="email" helperText="El email es incorrecto" errorText="email invalido" [(ngModel)]="email" type="email" required label="Correo electrónico" labelPlacement="floating" placeholder="ejemplo@gmail.com"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input name="password" [(ngModel)]="password" type="password" required label="Contraseña" labelPlacement="floating" placeholder="Ingrese su contraseña"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input name="password_confirm" [(ngModel)]="password_confirm" type="password" required label="confirme su contraseña" labelPlacement="floating" placeholder="Confirme su contraseña"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block">Registrarse</ion-button>
+  </form>
+
+
+</ion-content>
